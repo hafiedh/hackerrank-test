@@ -14,12 +14,12 @@ fun main(args: Array<String>) {
 private fun dayOfProgrammer(year: Int): String {
     var answerDate: String? = ""
     val ca = Calendar.getInstance()
-    if (year < 1918 && year % 100 == 0) {
-        answerDate = getAnswerDate(ca, year, 255)
+    answerDate = if (year < 1918 && year % 100 == 0) {
+        getAnswerDate(ca, year, 255)
     } else if (year == 1918) {
-        answerDate = getAnswerDate(ca, year, 269)
+        getAnswerDate(ca, year, 269)
     } else {
-        answerDate = getAnswerDate(ca, year, 256)
+        getAnswerDate(ca, year, 256)
     }
     return answerDate
 }

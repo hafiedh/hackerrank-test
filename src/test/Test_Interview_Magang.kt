@@ -1,22 +1,23 @@
-
+package test
 fun main() {
-    println(swap(30, 50))
+//    println(swap(30, 50))
     hollowBox(5)
-    print(reverse("Hello"))
+//    print(reverse("Hello"))
 }
 
 private fun hollowBox(n: Int) {
-    for (i in 0 until n) {
-        for (j in 0 until n) {
-            if (i == 0 || i == n - 1 || j == 0 || j == n - 1) {
+    for (i in 1..n) {
+        for (j in 1..n) {
+            if (i == 1 || i == n || j == 1 || j == n) {
                 print("*")
             } else {
                 print(" ")
             }
         }
+        println()
     }
-
 }
+
 
 private fun reverse(str: String): String {
     var result = ""
